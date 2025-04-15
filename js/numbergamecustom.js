@@ -84,6 +84,7 @@ restart.addEventListener("click", () => {
   user.readOnly = false;
   play.disabled = false;
   randomNum();
+  answer.textContent = "";
 });
 
 user.onfocus = () => {
