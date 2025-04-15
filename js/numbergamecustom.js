@@ -34,7 +34,6 @@ play.addEventListener("click", () => {
   } else {
     result.textContent = "Bingo";
   } */
-  console.log(userNum);
   //삼향연산자
   computerNum > userNum
     ? ((result.textContent = "Up"), (hintImg.src = "source/game_source/up.png"))
@@ -64,7 +63,12 @@ play.addEventListener("click", () => {
   inputCount += 1;
 
   if (countNum == 0) {
-    hintImg.src = "source/game_source/over.png";
+    if (computerNum == userNum) {
+      hintImg.src = "source/game_source/bingo.png";
+    } else {
+      hintImg.src = "source/game_source/over.png";
+    }
+
     user.readOnly = true;
     play.disabled = true;
     answer.textContent = `정답은 ${computerNum}입니다.`;

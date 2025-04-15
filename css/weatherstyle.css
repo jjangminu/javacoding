@@ -21,16 +21,6 @@ a {
 .home {
   margin: 1rem 1rem 0rem;
 }
-.wrap {
-  border: 5px solid pink;
-  width: 1500px;
-}
-.weather_news {
-  border: 1px solid red;
-}
-.weather_main {
-  border: 1px solid red;
-}
 
 /*mobile*/
 @media (max-width: 500px) {
@@ -291,5 +281,38 @@ a {
   }
   #time_wrap img {
     width: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrap {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 1200px;
+    margin: 0px auto;
+    box-sizing: border-box;
+  }
+  .weather_news {
+    border: 1px solid red;
+    width: calc(100% / 3 - 2rem);
+  }
+  .month_weather {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .month_weather h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .weather_main {
+    border: 1px solid red;
+    width: 40%;
+  }
+  .weather_image {
+    border: 1px solid red;
+    width: 20%;
   }
 }
