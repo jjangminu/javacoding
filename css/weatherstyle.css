@@ -21,6 +21,16 @@ a {
 .home {
   margin: 1rem 1rem 0rem;
 }
+.wrap {
+  border: 5px solid pink;
+  width: 1500px;
+}
+.weather_news {
+  border: 1px solid red;
+}
+.weather_main {
+  border: 1px solid red;
+}
 
 /*mobile*/
 @media (max-width: 500px) {

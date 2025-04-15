@@ -32,72 +32,82 @@
       <a href="index.html"><i class="fa-solid fa-angles-left"></i>뒤로가기</a>
     </div>
 
-    <!-- tittle, 현재시간 -->
-    <div id="tit_wrap">
-      <h2 id="tittle">Weather</h2>
-      <div id="now">현재시각 <span id="time"></span></div>
-    </div>
+    <div class="wrap">
+      <div class="weather_news"></div>
 
-    <!-- 입력창 -->
-    <div class="push">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="도시명을 입력해주세요"
-      />
-      <button type="button" class="btn btn-light">입력</button>
-    </div>
+      <div class="weather_main">
+        <!-- tittle, 현재시간 -->
+        <div id="tit_wrap">
+          <h2 id="tittle">Weather</h2>
+          <div id="now">현재시각 <span id="time"></span></div>
+        </div>
 
-    <!-- 국가 -->
-    <div id="country_but">
-      <button type="button" class="btn btn-link" onclick="weather(`Seoul`)">
-        서울
-      </button>
-      <button type="button" class="btn btn-link" onclick="weather(`Hongkong`)">
-        홍콩
-      </button>
-      <button type="button" class="btn btn-link" onclick="weather(`Paris`)">
-        파리
-      </button>
-      <button type="button" class="btn btn-link" onclick="weather(`Tokyo`)">
-        도쿄
-      </button>
-    </div>
+        <!-- 입력창 -->
+        <div class="push">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="도시명을 입력해주세요"
+          />
+          <button type="button" class="btn btn-light">입력</button>
+        </div>
 
-    <!-- detail -->
-    <div id="wrap">
-      <div id="place"></div>
-      <img id="iconImg" src="" alt="weather icon" />
-      <div id="temp"></div>
-      <div id="des"></div>
-      <div>
-        <span>체감온도</span> <span id="feel"></span> <span>습도</span>
-        <span id="humidity"></span>
-      </div>
-      <div><span>풍속</span> <span id="wind"></span></div>
-    </div>
+        <!-- 국가 -->
+        <div id="country_but">
+          <button type="button" class="btn btn-link" onclick="weather(`Seoul`)">
+            서울
+          </button>
+          <button
+            type="button"
+            class="btn btn-link"
+            onclick="weather(`Hongkong`)"
+          >
+            홍콩
+          </button>
+          <button type="button" class="btn btn-link" onclick="weather(`Paris`)">
+            파리
+          </button>
+          <button type="button" class="btn btn-link" onclick="weather(`Tokyo`)">
+            도쿄
+          </button>
+        </div>
 
-    <!-- time -->
-    <div id="time_wrap">
-      <div>
-        <span id="one_hour"></span>
-        <img id="one_icon" src="" alt="weather icon" />
-        <span id="one_temp"></span>
-      </div>
-      <div>
-        <span id="three_hour"></span>
-        <img id="three_icon" src="" alt="weather icon" />
-        <span id="three_temp"></span>
-      </div>
-      <div>
-        <span id="five_hour"></span>
-        <img id="five_icon" src="" alt="weather icon" />
-        <span id="five_temp"></span>
-      </div>
-      <div>
-        <span id="seven_hour"></span>
-        <img id="seven_icon" src="" alt="weather icon" />
-        <span id="seven_temp"></span>
+        <!-- detail -->
+        <div id="wrap">
+          <div id="place"></div>
+          <img id="iconImg" src="" alt="weather icon" />
+          <div id="temp"></div>
+          <div id="des"></div>
+          <div>
+            <span>체감온도</span> <span id="feel"></span> <span>습도</span>
+            <span id="humidity"></span>
+          </div>
+          <div><span>풍속</span> <span id="wind"></span></div>
+        </div>
+
+        <!-- time -->
+        <div id="time_wrap">
+          <div>
+            <span id="one_hour"></span>
+            <img id="one_icon" src="" alt="weather icon" />
+            <span id="one_temp"></span>
+          </div>
+          <div>
+            <span id="three_hour"></span>
+            <img id="three_icon" src="" alt="weather icon" />
+            <span id="three_temp"></span>
+          </div>
+          <div>
+            <span id="five_hour"></span>
+            <img id="five_icon" src="" alt="weather icon" />
+            <span id="five_temp"></span>
+          </div>
+          <div>
+            <span id="seven_hour"></span>
+            <img id="seven_icon" src="" alt="weather icon" />
+            <span id="seven_temp"></span>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -66,6 +66,7 @@ play.addEventListener("click", () => {
     hintImg.src = "source/game_source/over.png";
     user.readOnly = true;
     play.disabled = true;
+    inputNum[4].textContent = `정답은 ${computerNum}입니다.`;
   }
 });
 
