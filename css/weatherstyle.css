@@ -14,6 +14,13 @@
 ::-webkit-scrollbar {
   display: none;
 }
+a {
+  text-decoration: none;
+  color: unset;
+}
+.home {
+  margin: 1rem 1rem 0rem;
+}
 
 /*mobile*/
 @media (max-width: 500px) {
@@ -36,7 +43,7 @@
   #tit_wrap {
     display: flex;
     width: 90%;
-    margin: 1rem auto 0rem;
+    margin: 0rem auto 0rem;
     justify-content: space-between;
     align-items: end;
   }
@@ -169,7 +176,7 @@
   #tit_wrap {
     display: flex;
     width: 450px;
-    margin: 1.5rem auto 0.8rem;
+    margin: 0rem auto 0.8rem;
     justify-content: space-between;
     align-items: end;
   }
