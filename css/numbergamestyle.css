@@ -64,6 +64,9 @@ Input {
 .home {
   margin: 1rem;
 }
+#answer {
+  font-size: 2rem;
+}
 
 @media (max-width: 600px) {
   body {
@@ -77,6 +80,9 @@ Input {
   }
   img {
     width: 90%;
+  }
+  #answer {
+    font-size: 1.2rem;
   }
   .screen {
     gap: 0rem;

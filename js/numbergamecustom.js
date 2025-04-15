@@ -5,6 +5,7 @@ let count = document.querySelector("#count");
 let hintImg = document.querySelector("#hintImg");
 let restart = document.querySelector("#restart");
 let inputNum = document.querySelectorAll("#inputNum li");
+let answer = document.querySelector("#answer");
 
 //숫자 랜덤 만들기
 /* let num = Math.floor(Math.random() * 100 + 1);
@@ -66,7 +67,7 @@ play.addEventListener("click", () => {
     hintImg.src = "source/game_source/over.png";
     user.readOnly = true;
     play.disabled = true;
-    inputNum[4].textContent = `정답은 ${computerNum}입니다.`;
+    answer.textContent = `정답은 ${computerNum}입니다.`;
   }
 });
 
