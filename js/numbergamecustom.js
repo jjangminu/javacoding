@@ -34,6 +34,7 @@ play.addEventListener("click", () => {
   } else {
     result.textContent = "Bingo";
   } */
+ 
   //삼향연산자
   computerNum > userNum
     ? ((result.textContent = "Up"), (hintImg.src = "source/game_source/up.png"))
