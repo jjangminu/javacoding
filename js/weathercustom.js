@@ -317,3 +317,30 @@ render2 = (data2) => {
   }
   seven_icon.src = madeIcon3;
 };
+
+calendarCoding = () => {
+  const currYear = today.getFullYear(),
+    currMonth = today.getMonth();
+
+  console.log(today);
+  console.log(currYear);
+  console.log(currMonth);
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  console.log(months[currMonth]);
+};
+calendarCoding();

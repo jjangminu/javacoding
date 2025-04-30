@@ -156,7 +156,6 @@ a {
 /*tablet, pc*/
 @media (min-width: 500px) {
   body {
-    background-color: cornflowerblue;
     font-family: "Pretendard-Regular";
     font-size: 16px;
     color: white;
@@ -284,13 +283,13 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .wrap {
     width: fit-content;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    width: 1200px;
+    width: 95%;
     margin: 0px auto;
     box-sizing: border-box;
   }
@@ -307,14 +306,6 @@ a {
   .weather_news h3 {
     text-align: center;
     font-size: 1.5rem;
-  }
-  .weather_main {
-    border: 1px solid red;
-    width: 40%;
-  }
-  .weather_image {
-    border: 1px solid red;
-    width: 20%;
   }
 
   .calendar_wrap {
@@ -376,5 +367,14 @@ a {
   }
   .days li.active::before {
     background: #008aff;
+  }
+
+  .weather_main {
+    border: 1px solid red;
+    width: 500px;
+  }
+  .weather_image {
+    border: 1px solid red;
+    width: 20%;
   }
 }

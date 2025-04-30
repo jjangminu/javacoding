@@ -36,18 +36,25 @@ ul {
     box-sizing: border-box;
     flex-wrap: wrap;
   }
+  ul li {
+    width: calc(100% / 2 - 3rem);
+  }
   ul img {
-    width: 150px;
+    width: 100%;
   }
 }
 
 @media (min-width: 700px) {
   ul {
-    width: 690px;
-    gap: 5rem;
-    padding: 2rem 0px;
+    width: 700px;
+    gap: 3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  ul li {
+    width: calc(100% / 3 - 3rem);
   }
   ul img {
-    width: 250px;
+    width: 100%;
   }
 }
