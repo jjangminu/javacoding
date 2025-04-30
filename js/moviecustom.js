@@ -1,5 +1,6 @@
 //header
 let header = document.querySelector("header");
+let headerLogo = document.querySelector("header h1");
 
 //main list
 let now = document.querySelector("#now");
@@ -20,8 +21,10 @@ window.addEventListener("scroll", function () {
 
   if (scr >= 75) {
     header.style.backgroundColor = "rgba(0, 0, 0,0.3)";
+    headerLogo.style.color = "white";
   } else {
     header.style.backgroundColor = "rgb(0, 0, 0)";
+    headerLogo.style.color = "gold";
   }
 });
 
@@ -101,6 +104,53 @@ popularTurn = () => {
   });
 };
 popular_roll();
+
+//now 변수선언
+let nowWrap = document.querySelector("#nowWrap");
+let nowItems = document.querySelectorAll("#nowWrap li");
+let nowPoster = document.querySelectorAll("#nowWrap .poster");
+let nowTitle = document.querySelectorAll("#nowWrap h3");
+let nowMark = document.querySelectorAll("#nowWrap div i");
+let nowHeart = document.querySelectorAll("#nowWrap p");
+let nowLike = document.querySelectorAll("#nowWrap .like");
+
+//now
+let now_movie = async () => {
+  let response = await fetch(now_url);
+  let data = await response.json();
+  console.log(data);
+
+  count = nowItems.length - 1;
+
+  for (i = 0; i <= count; i++) {
+    nowPoster[
+      i
+    ].src = `https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}`;
+    nowTitle[i].textContent = data.results[i].title;
+    nowLike[i].textContent = data.results[i].vote_count;
+  }
+};
+now_movie();
+
+//now bookmark click
+nowMark.forEach(function (item, index) {
+  item.addEventListener("click", () => {
+    item.classList.toggle("yellow");
+  });
+});
+
+//now like click
+nowHeart.forEach(function (item, index) {
+  let nowClick = false;
+  item.addEventListener("click", function () {
+    if (!nowClick) {
+      item.classList.add("red");
+      nowCount = Number(nowLike[index].innerText);
+      nowLike[index].textContent = nowCount + 1;
+      nowClick = true;
+    }
+  });
+});
 
 //rated 변수선언
 let ratedWrap = document.querySelector("#ratedWrap");
@@ -203,39 +253,6 @@ rated_right.addEventListener("click", () => {
     }
   }, 500);
   rated_roll();
-});
-
-//now 변수선언
-let nowWrap = document.querySelector("#nowWrap");
-let nowItems = document.querySelectorAll("#nowWrap li");
-let nowPoster = document.querySelectorAll("#nowWrap .poster");
-let nowTitle = document.querySelectorAll("#nowWrap h3");
-let nowMark = document.querySelectorAll("#nowWrap div i");
-let nowLike = document.querySelectorAll("#nowWrap .like");
-
-//now
-let now_movie = async () => {
-  let response = await fetch(now_url);
-  let data = await response.json();
-  console.log(data);
-
-  count = nowItems.length - 1;
-
-  for (i = 0; i <= count; i++) {
-    nowPoster[
-      i
-    ].src = `https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}`;
-    nowTitle[i].textContent = data.results[i].title;
-    nowLike[i].textContent = data.results[i].vote_count;
-  }
-};
-now_movie();
-
-//now bookmark click
-nowMark.forEach(function (item, index) {
-  item.addEventListener("click", () => {
-    item.classList.toggle("yellow");
-  });
 });
 
 //upcoming 변수선언
