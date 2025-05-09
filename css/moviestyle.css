@@ -56,6 +56,12 @@ h1 {
   font-family: "PyeongChangPeace-Bold";
 }
 
+.back_fix {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
 /*mobile*/
 @media (max-width: 600px) {
   /*logo*/
