@@ -2,6 +2,13 @@
   margin: 0px;
   padding: 0px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -151,6 +158,11 @@ a {
   #time_wrap img {
     width: 30px;
   }
+
+  .weather_image,
+  .weather_news {
+    display: none;
+  }
 }
 
 /*tablet, pc*/
@@ -281,9 +293,18 @@ a {
   #time_wrap img {
     width: 50px;
   }
+
+  .weather_image,
+  .weather_news {
+    display: none;
+  }
 }
 
 @media (min-width: 1000px) {
+  .weather_image,
+  .weather_news {
+    display: block;
+  }
   .wrap {
     width: fit-content;
     display: flex;
@@ -294,8 +315,8 @@ a {
     box-sizing: border-box;
   }
   .weather_news {
-    border: 1px solid red;
     width: calc(100% / 3 - 2rem);
+    margin: auto 0rem;
   }
   .weather_news > div {
     background-color: rgba(255, 255, 255, 0.2);
@@ -370,11 +391,28 @@ a {
   }
 
   .weather_main {
-    border: 1px solid red;
     width: 500px;
   }
+
   .weather_image {
-    border: 1px solid red;
     width: 20%;
+    height: 92vh;
+    overflow-y: scroll;
+  }
+  .weather_image ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .weather_image li {
+    width: 100%;
+    margin: 0px;
+  }
+  .weather_image img {
+    width: 100%;
+    border-radius: 1rem;
   }
 }

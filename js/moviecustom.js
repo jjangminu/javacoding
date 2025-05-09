@@ -2,6 +2,22 @@
 let header = document.querySelector("header");
 let headerLogo = document.querySelector("header h1");
 
+//header mobile menu
+let bar = document.querySelector("header .bar");
+let close = document.querySelector("header .close");
+let navi = document.querySelector("header ul");
+
+bar.addEventListener("click", function () {
+  bar.style.display = "none";
+  close.style.display = "block";
+  navi.style.opacity = "1";
+});
+close.addEventListener("click", function () {
+  bar.style.display = "block";
+  close.style.display = "none";
+  navi.style.opacity = "0";
+});
+
 //main list
 let now = document.querySelector("#now");
 let popular = document.querySelector("#popular");

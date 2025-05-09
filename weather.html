@@ -181,7 +181,27 @@
           </div>
         </div>
       </div>
-      <div class="weather_image"></div>
+      <div class="weather_image">
+        <ul
+          ontouchstart="startDrag(event)"
+          ontouchmove="drag(event)"
+          ontouchend="endDrag(event)"
+        >
+          <li>
+            <img src="source/weather_source/pic1.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic2.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic3.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic5.jpg" />
+          </li>
+          <li><img src="source/weather_source/pic4.jpg" /></li>
+        </ul>
+      </div>
     </div>
 
     <script src="js/weathercustom.js"></script>

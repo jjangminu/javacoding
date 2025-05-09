@@ -344,3 +344,9 @@ calendarCoding = () => {
   console.log(months[currMonth]);
 };
 calendarCoding();
+
+//weather img roll
+// 요소 & 사이즈
+const weatherImgwrap = document.querySelector(".weather_image ul");
+const wrapScrollWidth = weatherImgwrap.scrollWidth;
+const wrapClientWidth = weatherImgwrap.clientWidth;
