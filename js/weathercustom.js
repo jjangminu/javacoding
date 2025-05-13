@@ -5,6 +5,7 @@ let des = document.querySelector("#des");
 let feel = document.querySelector("#feel");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
+let video = document.querySelector(".video");
 
 //시간
 let now_time = document.querySelector("#time");
@@ -163,20 +164,24 @@ render = (data) => {
   humidity.textContent = data.main.humidity + "%";
   //풍속
   wind.textContent = data.wind.speed + "m/s";
-
   //아이콘
   let icon = data.weather[0].icon;
   let madeIcon;
   if (icon == "01d") {
     madeIcon = "source/weather_source/icon_sun.png";
+    video.src = "source/weather_source/sun.mp4";
   } else if (icon == "02d") {
     madeIcon = "source/weather_source/icon_suncloud.png";
+    video.src = "source/weather_source/cloud.mp4";
   } else if (icon == "03d" || icon == "03n") {
     madeIcon = "source/weather_source/icon_cloud.png";
+    video.src = "source/weather_source/cloud.mp4";
   } else if (icon == "04d" || icon == "04n") {
     madeIcon = "source/weather_source/icon_cloudy.png";
+    video.src = "source/weather_source/cloud.mp4";
   } else if (icon == "09d" || icon == "09n") {
     madeIcon = "source/weather_source/icon_rain.png";
+    video.src = "source/weather_source/rain.mp4";
   } else if (icon == "10d") {
     madeIcon = "source/weather_source/icon_sunrain.png";
   } else if (icon == "11d" || icon == "11n") {
