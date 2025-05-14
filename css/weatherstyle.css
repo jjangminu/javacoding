@@ -26,8 +26,8 @@ a {
   color: unset;
 }
 .home {
-  position: absolute;
-  bottom: -1rem;
+  position: fixed;
+  top: 1rem;
   left: 1rem;
 }
 

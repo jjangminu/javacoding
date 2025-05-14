@@ -58,7 +58,7 @@ h1 {
 
 .back_fix {
   position: fixed;
-  bottom: 1rem;
+  top: 5.5  rem;
   left: 1rem;
 }
 
@@ -704,6 +704,11 @@ h1 {
     transform-style: preserve-3d; /*자식요소도 함께 회전할 때 사용*/
     transition: 0.5s;
     box-sizing: border-box;
+    padding-right: 1rem;
+  }
+  #popular li:nth-child(2n) {
+    border-left: 3px solid #364861;
+    padding-left: 2rem;
   }
   #popular .detail {
     display: flex;
@@ -714,7 +719,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     background-color: #223044;
-    padding: 0.5rem;
+    padding-right: 2rem;
     box-sizing: border-box;
   }
   #popular .detail div {
@@ -1165,9 +1170,12 @@ h1 {
   #popular li {
     width: calc(100% / 2 - 1rem);
     position: relative;
-    height: 14vw;
+    height: 17vw;
     transform-style: preserve-3d; /*자식요소도 함께 회전할 때 사용*/
     transition: 0.5s;
+  }
+  #popular li:nth-child(2n) {
+    border-left: 3px solid #364861;
   }
   #popular .detail {
     display: flex;
@@ -1178,7 +1186,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     background-color: #223044;
-    padding: 0.5rem;
+    padding: 2rem;
     box-sizing: border-box;
   }
   #popular .detail div {
